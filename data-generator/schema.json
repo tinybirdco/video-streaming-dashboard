@@ -1,0 +1,93 @@
+{
+    "timestamp": {
+      "type": "mockingbird.timestampNow"
+    },
+    "event_id": {
+      "type": "string.uuid"
+    },
+    "user_id": {
+      "type": "number.int",
+      "params": [
+        {
+          "min": 100000,
+          "max": 999999
+        }
+      ]
+    },
+    "platform": {
+      "type": "mockingbird.pickWeighted",
+      "params": [
+        {
+          "values": [
+            "Web",
+            "Mobile",
+            "SmartTV",
+            "Tablet"
+          ],
+          "weights": [
+            50,
+            30,
+            10,
+            10
+          ]
+        }
+      ]
+    },
+    "video_id": {
+      "type": "number.int",
+      "params": [
+        {
+          "min": 5000,
+          "max": 10000
+        }
+      ]
+    },
+    "subscription": {
+      "type": "mockingbird.pickWeighted",
+      "params": [
+        {
+          "values": [
+            "Free",
+            "Basic",
+            "Premium",
+            "VIP"
+          ],
+          "weights": [
+            60,
+            20,
+            15,
+            5
+          ]
+        }
+      ]
+    },
+    "watch_duration": {
+      "type": "number.float",
+      "params": [
+        {
+          "min": 1.0,
+          "max": 180.0
+        }
+      ]
+    },
+    "utm_source": {
+      "type": "mockingbird.pickWeighted",
+      "params": [
+        {
+          "values": [
+            "email",
+            "social_media",
+            "ads",
+            "direct"
+          ],
+          "weights": [
+            20,
+            50,
+            25,
+            5
+          ]
+        }
+      ]
+    }
+  }
+  

@@ -1,0 +1,12 @@
+TOKEN "charts_token" READ
+
+NODE endpoint
+SQL >
+
+    %
+    SELECT platform, count() as event_count 
+    FROM video_events
+    WHERE date(timestamp) between {{Date(date_from, '2024-06-25')}} and {{Date(date_to, '2024-06-30')}}
+    GROUP BY platform
+
+

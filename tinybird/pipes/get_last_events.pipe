@@ -1,0 +1,13 @@
+TOKEN "charts_token" READ
+
+NODE endpoint
+SQL >
+
+    %
+    SELECT event_id, platform, subscription, timestamp, user_id, utm_source, video_id, watch_duration 
+    FROM video_events
+    WHERE date(timestamp) between {{Date(date_from, '2024-06-25')}} and {{Date(date_to, '2024-06-30')}}
+    ORDER BY timestamp desc
+    LIMIT 10
+
+

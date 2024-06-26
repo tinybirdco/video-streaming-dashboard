@@ -1,0 +1,16 @@
+TOKEN "append_video_events" APPEND
+
+
+SCHEMA >
+    `event_id` String `json:$.event_id`,
+    `platform` String `json:$.platform`,
+    `subscription` String `json:$.subscription`,
+    `timestamp` DateTime64(3) `json:$.timestamp`,
+    `user_id` Int32 `json:$.user_id`,
+    `utm_source` String `json:$.utm_source`,
+    `video_id` Int32 `json:$.video_id`,
+    `watch_duration` Float32 `json:$.watch_duration`
+
+ENGINE "MergeTree"
+ENGINE_PARTITION_KEY "toYear(timestamp)"
+ENGINE_SORTING_KEY "timestamp, user_id, utm_source, video_id"
