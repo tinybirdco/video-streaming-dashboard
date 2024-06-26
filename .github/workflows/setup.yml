@@ -1,0 +1,37 @@
+name: Setup Next.js Project
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install pnpm
+      run: npm install -g pnpm
+
+    - name: Install dependencies
+      run: pnpm install
+
+    - name: Build Next.js project
+      run: pnpm run build
+
+    - name: Export static HTML
+      run: pnpm run export
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: nextjs-build
+        path: ./out  # The directory with the static files from `next export`
