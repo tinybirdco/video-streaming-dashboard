@@ -1,6 +1,7 @@
 # File: .github/workflows/publish.yml
 name: publish-to-github-pages
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
