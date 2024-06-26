@@ -2,6 +2,8 @@
 
 This is a [Next.js](https://nextjs.org/) project built over Tinybird project.
 
+![Dashboard Screenshot](assets/dashboard.png)
+
 ## Getting Started
 
 1. Create a Python virtual environment:
