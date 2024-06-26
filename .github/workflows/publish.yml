@@ -18,7 +18,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env:
+      NEXT_PUBLIC_DASHBOARD_TOKEN:  ${{secrets.NEXT_PUBLIC_DASHBOARD_TOKEN}}
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4

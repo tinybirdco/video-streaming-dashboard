@@ -2,6 +2,8 @@
 
 This is a [Next.js](https://nextjs.org/) project built over Tinybird project.
 
+[https://tinybirdco.github.io/video-streaming-dashboard/](https://tinybirdco.github.io/video-streaming-dashboard/)
+
 ![Dashboard Screenshot](assets/dashboard.png)
 
 ## Getting Started
