@@ -19,6 +19,7 @@ export default function EventsByPlatform(params: {
       showLegend={true}
       height="400px"
       params={params}
+      padding="20px"
     />
   )
 }

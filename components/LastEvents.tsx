@@ -94,7 +94,7 @@ export default function LastEvents (params: { date_from?: string; date_to?: stri
 
   return (
     <div style={tableStyle}>
-      <table>
+      <table style={{width: '100%'}}>
         <thead>
           <tr>
             <th style={thStyle}>Event ID</th>

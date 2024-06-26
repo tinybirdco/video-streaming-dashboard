@@ -18,6 +18,7 @@ export default function EventsByTimestamp(params: {
       title="Events by Date"
       height="400px"
       params={params}
+      padding="20px"
     />
   )
 }
